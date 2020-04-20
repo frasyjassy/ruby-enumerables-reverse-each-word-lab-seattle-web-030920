@@ -1,3 +1,4 @@
+require 'pry'
 
 =begin
 def reverse_each_word(setence1)
@@ -24,23 +25,23 @@ puts reverse_string(setence1)
 
 def reverse_each_word(setence1)
 
-  old_array = string.split(" ")
-  return_array = []
-  old_array.each do|sentence1|
-    return_array << sentence1.reverse
-  end
-  return_array.join(" ")
+  old_array = string.split(" ")            # to split the string by word 
+  return_array = []                       #making a new array because we have changed it from srting to array of words
+  old_array.each do|sentence1|           #want to loop over each element in the Array
+    return_array << sentence1.reverse   #its going to return the new array with each word reversed
+  end                                  #ends the loop
+  return_array.join(" ")              #join the string we broke up to make an array back to a sentence with .join
 end
 
-def reverse_each_word(sentence1)
-  array = sentence1.split(" ") 
-  test_array = []
-  array.collect do|sentence1| 
-    test_array << sentence1.reverse 
+def reverse_each_word(sentence2)
+  ulti_array = sentence2.split(" ") 
+  dos_array = []
+  ulti_array.collect do|sentence2| 
+    dos_array << sentence2.reverse 
   end
-  test_array.join(" ")
+  dos_array.join(" ")
 end
 
 
 reverse_each_word("Hello there, and how are you?")
-
+reverse_each_word("Hi again, just making sure it's reversed!")
